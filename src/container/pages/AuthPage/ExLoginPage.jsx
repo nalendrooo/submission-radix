@@ -8,8 +8,14 @@ function LoginPage() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const onLogin = ({ email, password }) => {
-    dispatch(asyncSetAuthUser({ email, password }));
-    navigate('/profile');
+    if (!email) {
+      alert('"email" is not allowed to be empty');
+    } else if (!password) {
+      alert('"password" is not allowed to be empty');
+    } else {
+      dispatch(asyncSetAuthUser({ email, password }));
+      navigate('/profile');
+    }
   };
   return (
     <div className="flex flex-col items-center justify-center h-screen mx-auto bg-slate-200 md:w-1/2">

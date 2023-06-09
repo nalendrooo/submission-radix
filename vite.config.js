@@ -13,6 +13,6 @@ export default defineConfig({
     },
   },
   server: {
-    port: 4000, // Ubah port sesuai yang Anda inginkan
+    port: 3000, // Ubah port sesuai yang Anda inginkan
   },
 });

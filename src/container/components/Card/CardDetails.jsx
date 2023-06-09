@@ -40,7 +40,7 @@ function CardDetails({ detailThread }) {
     setState({ content: '' });
   };
   const onLogin = () => {
-    navigate('/');
+    navigate('/login');
   };
 
   return (

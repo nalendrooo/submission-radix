@@ -9,11 +9,11 @@
 
 describe('Login spec', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:4000/login');
+    cy.visit('http://localhost:3000/login');
   });
   it('should display login page correctly', () => {
     it('should display login page correctly', () => {
-      cy.visit('http://localhost:4000/login');
+      cy.visit('http://localhost:3000/login');
       // memverifikasi elemen yang harus tampak pada halaman login
       cy.get('input[placeholder="Please enter your email address"]').should('be.visible');
       cy.get('input[placeholder="Please enter your password"]').should('be.visible');
@@ -21,13 +21,13 @@ describe('Login spec', () => {
     });
   });
 
-  it('should display alert when username is empty', () => {
+  it('should display alert when email is empty', () => {
     // klik tombol login tanpa mengisi username
     cy.get('button').contains(/^Masuk$/).click();
 
     // memverifikasi window.alert untuk menampilkan pesan dari API
     cy.on('window:alert', (str) => {
-      expect(str).to.equal('"id" is not allowed to be empty');
+      expect(str).to.equal('"email" is not allowed to be empty');
     });
   });
 
@@ -44,7 +44,7 @@ describe('Login spec', () => {
     });
   });
 
-  it('should display alert when username and password are wrong', () => {
+  it('should display alert when email and password are wrong', () => {
     // mengisi username
     cy.get('input[placeholder="Please enter your email address"]').type('testuser@gmail.com');
 
@@ -60,7 +60,7 @@ describe('Login spec', () => {
     });
   });
 
-  it('should display homepage when username and password are correct', () => {
+  it('should display homepage when email and password are correct', () => {
     // mengisi username
     cy.get('input[placeholder="Please enter your email address"]').type('testuser@gmail.com');
 

@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-import { mauve, violet, red, blackA } from '@radix-ui/colors';
+import {
+  mauve, violet, red, blackA,
+} from '@radix-ui/colors';
+
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
