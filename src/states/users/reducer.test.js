@@ -16,7 +16,7 @@ describe('usersReducer function', () => {
     // arrange
     const initialState = [];
     const action = {
-      type: 'RECEIVE_USERS',
+      type: 'RECEIVE_USER',
       payload: {
         users: {
           id: 'threads-1',
