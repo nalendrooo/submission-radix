@@ -20,7 +20,7 @@ describe('usersReducer function', () => {
       payload: {
         users: {
           id: 'threads-1',
-          user: 'user-1',
+          user: 'user-2',
         },
       },
     };
