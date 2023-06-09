@@ -48,7 +48,7 @@ function Register({ register }) {
             Please enter your email
           </Form.Message>
           <Form.Message className="text-[13px] text-white opacity-[0.8]" match="typeMismatch">
-            Please provide a valid email
+            Please provide a valid email address
           </Form.Message>
         </div>
         <Form.Control asChild>
