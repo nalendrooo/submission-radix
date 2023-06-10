@@ -9,11 +9,11 @@
 
 describe('Login spec', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/login');
+    cy.visit('http://127.0.0.1:3000/login');
   });
   it('should display login page correctly', () => {
     it('should display login page correctly', () => {
-      cy.visit('http://localhost:3000/login');
+      cy.visit('http://127.0.0.1:3000/login');
       // memverifikasi elemen yang harus tampak pada halaman login
       cy.get('input[placeholder="Please enter your email address"]').should('be.visible');
       cy.get('input[placeholder="Please enter your password"]').should('be.visible');
