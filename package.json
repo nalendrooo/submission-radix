@@ -13,7 +13,7 @@
     "fix": "eslint --fix src --ext js,jsx",
     "test": "vitest",
     "e2e": "cypress run",
-    "ci:test": "vitest --no-watch && start-server-and-test dev http://127.0.0.1:3000/ e2e"
+    "ci:test": "vitest --no-watch && start-server-and-test dev http-get://127.0.0.1:3000/ e2e"
   },
   "dependencies": {
     "@radix-ui/colors": "^0.1.8",
