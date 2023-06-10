@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "css-build": "npx tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/style.css --watch",
     "fix": "eslint --fix src --ext js,jsx",
-    "test": "vitest",
+    "test": "vitest --no-watch",
     "e2e": "cypress run",
     "ci:test": "vitest --no-watch && start-server-and-test dev http-get://0.0.0.0:3000/ e2e"
   },
